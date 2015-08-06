@@ -60,6 +60,7 @@ $(document).ready(function() {
         }
       }
       var generals = new Generals(generalList);
+      console.log(generals);
       generalView.render(generals);
       generalInfoView.render(generals);
     }
@@ -251,12 +252,14 @@ $(document).ready(function() {
 
   $('#get_started').on('click', function() {
     $('#general').show();
+    $(".search-input").attr("disabled", "disabled");
     $('#scrollspy').hide();
     $('#swagger-ui-container').hide();
   });
 
   $('#documentation').on('click', function() {
     $('#general').hide();
+    $(".search-input").removeAttr("disabled");
     $('#scrollspy').show();
     $('#swagger-ui-container').show();
   });
