@@ -3,27 +3,26 @@
 }
 
 #general-navigation {
-    float: left;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    background-color: #f5f5f5;
-    padding-bottom: 20px;
+  float: left;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding-bottom: 20px;
+  background-color: #f5f5f5;
+  max-width: 28%;
+}
+
+#swagger-ui-container, #general-info-navigation {
+  margin-bottom: 150px !important;
+  float: left !important;
+  margin-left: 2% !important;
+  margin-right: 2% !important;
+  max-width: 68% !important;
+  min-width: 68% !important;
+  margin-top: 70px !important;
 }
 
 #general-info-navigation {
-    float: left;
-    margin-top: 120px;
-    margin-bottom: 120px;
-    max-width: 870px;
-    margin-left: 20px;
-}
-
-#swagger-ui-container {
-  margin-bottom: 150px !important;
-  float: left !important;
-  margin-left: 20px !important;
-  max-width: 870px !important;
-  margin-top: 70px !important;
+  margin-top: 100px !important;
 }
 
 .reference_header {
@@ -54,6 +53,7 @@
 
 #main_navigation {
   padding: 5px;
+  min-width: 960px;
 }
 
 #sub_navigation {
@@ -92,9 +92,6 @@
 }
 
 .info {
-  width: 900px;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 50px;
 }
 
@@ -135,23 +132,27 @@ tr.GrayTableHead > td {
   background-color: #ff9999;
 }
 
-#scrollspy {
+#scrollspy, #general-navigation {
   float: left;
   margin-top: 100px;
-  float: left;
   margin-bottom: 100px;
-  background-color: #f5f5f5;
   padding-bottom: 20px;
+  padding-right: 1%;
+  background-color: #f5f5f5;
+  max-width: 27%;
+  overflow-x: scroll;
 }
 
-.wrapper {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1300px
+#scrollspy > ul, #general-navigation > ul {
+  list-style-type: disc;
 }
+
+.jumper-wrapper > ul {
+  list-style-type: circle;
+}
+
 
 .jumper-wrapper {
-  list-style-image: url(../images/menu-collapsed.png);
   padding: 5px;
   margin-left: 30px;
 }
@@ -159,13 +160,12 @@ tr.GrayTableHead > td {
 .sub-jumper-wrapper {
   padding: 5px;
   margin-left: 15px;
-  list-style-image: url(../images/menu-leaf.png);
 }
 
 .jumper, .jumper:active, .jumper:visited
 , .sub-jumper, .sub-jumper:visited {
     color: #D04300;
-    font-family: Helvetica Neue;
+    font-family: Arial;
     text-decoration: none;
     font-size: 17px;
 }
